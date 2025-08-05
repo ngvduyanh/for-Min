@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quà tặng cho bé Min 🎁</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .gift-box {
+      width: 150px;
+      height: 150px;
+      background: url('https://i.imgur.com/7nL1F5I.png') no-repeat center/cover;
+      cursor: pointer;
+      animation: shake 1.5s infinite;
+      transition: transform 0.5s;
+    }
+
+    .gift-box:active {
+      transform: scale(0.95);
+    }
+
+    .message {
+      display: none;
+      position: absolute;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 300px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .message p {
+      font-size: 1.2em;
+      color: #ff4081;
+      margin: 0;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+      100% { transform: rotate(-5deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="gift-box" onclick="openGift()"></div>
+
+  <div class="message" id="msg">
+    <p>🎀 Anh vẫn ở đây để dịu dàng với em, em đừng lo lắng nhiều quá, thương bé Min nhèo 💖</p>
+  </div>
+
+  <script>
+    function openGift() {
+      document.querySelector('.gift-box').style.display = 'none';
+      document.getElementById('msg').style.display = 'block';
+    }
+    
+  </script>
+</body>
+</html>
+
